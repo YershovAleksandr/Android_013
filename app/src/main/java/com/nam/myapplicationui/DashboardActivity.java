@@ -5,14 +5,28 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 
 public class DashboardActivity extends AppCompatActivity {
 
+    public static final String LOGTAG = "XLOG42";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
+
+        int i = getIntent().getIntExtra("XInt", -1);
+        float f = getIntent().getFloatExtra("XFloat", -1.f);
+        String s = getIntent().getStringExtra("XString");
+
+        Log.i(LOGTAG, "XInt = " + i);
+        Log.i(LOGTAG, "XFloat = " + f);
+        Log.i(LOGTAG, "XString = " + s);
+
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 

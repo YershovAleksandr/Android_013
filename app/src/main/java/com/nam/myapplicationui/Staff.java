@@ -20,6 +20,10 @@ public class Staff
 
     private AppCompatActivity mActivity;
 
+    private int XInt;
+    private float XFloat;
+    private String XString;
+
 
     public Staff(AppCompatActivity xactivity)
     {
@@ -55,11 +59,22 @@ public class Staff
     {
         Intent intent = new Intent();
 
+        XInt = 42;
+        XFloat = 42.42f;
+        XString = new String("42");
+
+        XInt += hack;
+        XFloat = XFloat + (float)hack;
+        XString = XString.concat(new String(" + " + hack));
+
+
         switch (hack)
         {
             case 0 :
             {
                 intent.setClass(mActivity.getBaseContext(), HomeActivity.class);
+
+                XString = XHome + XString;
 
                 break;
             }
@@ -67,15 +82,23 @@ public class Staff
             {
                 intent.setClass(mActivity.getBaseContext(), DashboardActivity.class);
 
+                XString = XDashboard + XString;
+
                 break;
             }
             case 2 :
             {
                 intent.setClass(mActivity.getBaseContext(), NotificationActivity.class);
 
+                XString = XNotification + XString;
+
                 break;
             }
         }
+
+        intent.putExtra("XInt", XInt);
+        intent.putExtra("XFloat", XFloat);
+        intent.putExtra("XString", XString);
 
         Log.i(LOGTAG, "Class = " + this.getClass().toString());
 
