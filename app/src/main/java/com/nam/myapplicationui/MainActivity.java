@@ -1,16 +1,24 @@
 package com.nam.myapplicationui;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
+import android.util.Log;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static final String LOGTAG = "XLOG42";
+
     private TextView mTextMessage;
     private Staff mStaff;
+
+    public Button mButton;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -42,7 +50,19 @@ public class MainActivity extends AppCompatActivity {
 
         mStaff = new Staff(this);
 
-        //
+        mButton = findViewById(R.id.button8);
+
+        mButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.i(LOGTAG , "BntClick 8 Click motherfucka !!!!");
+
+                Intent intent = new Intent(getBaseContext(), Main2Activity.class);
+
+                startActivity(intent);
+
+            }
+        });
 
         mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
