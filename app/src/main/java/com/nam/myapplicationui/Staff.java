@@ -1,6 +1,7 @@
 package com.nam.myapplicationui;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.TextView;
@@ -67,7 +68,6 @@ public class Staff
         XFloat = XFloat + (float)hack;
         XString = XString.concat(new String(" + " + hack));
 
-
         switch (hack)
         {
             case 0 :
@@ -96,9 +96,17 @@ public class Staff
             }
         }
 
-        intent.putExtra("XInt", XInt);
+        /*intent.putExtra("XInt", XInt);
         intent.putExtra("XFloat", XFloat);
-        intent.putExtra("XString", XString);
+        intent.putExtra("XString", XString);*/
+
+        Bundle bundle = new Bundle();
+
+        bundle.putInt("XInt", XInt);
+        bundle.putFloat("XFloat", XFloat);
+        bundle.putString("XString", XString);
+
+        intent.putExtras(bundle);
 
         Log.i(LOGTAG, "Class = " + this.getClass().toString());
 

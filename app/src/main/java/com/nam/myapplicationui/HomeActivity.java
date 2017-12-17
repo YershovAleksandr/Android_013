@@ -14,14 +14,29 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        int i = getIntent().getIntExtra("XInt", -1);
-        float f = getIntent().getFloatExtra("XFloat", -1.f);
-        String s = getIntent().getStringExtra("XString");
+        int i;
+        float f;
+        String s;
+
+/*        i = getIntent().getIntExtra("XInt", -1);
+        f = getIntent().getFloatExtra("XFloat", -1.f);
+        s = getIntent().getStringExtra("XString");*/
+
+
+
+        Bundle bundle;
+
+        bundle = getIntent().getExtras();
+        //.getBundleExtra(null);
+
+        i = bundle.getInt("XInt");
+        f = bundle.getFloat("XFloat");
+        s = bundle.getString("XString");
+
 
         Log.i(LOGTAG, "XInt = " + i);
         Log.i(LOGTAG, "XFloat = " + f);
         Log.i(LOGTAG, "XString = " + s);
-
 
     }
 }
