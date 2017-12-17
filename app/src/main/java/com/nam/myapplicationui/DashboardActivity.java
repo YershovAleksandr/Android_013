@@ -7,10 +7,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
+import android.widget.CheckBox;
 
 public class DashboardActivity extends AppCompatActivity {
 
     public static final String LOGTAG = "XLOG42";
+
+    public Button mButton;
+    public CheckBox mCheckBox1;
+    public CheckBox mCheckBox2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +44,38 @@ public class DashboardActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        mCheckBox1 = findViewById(R.id.checkBox);
+        mCheckBox2 = findViewById(R.id.checkBox2);
+
+
+        mButton = findViewById(R.id.button7);
+
+        mButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Log.i(LOGTAG, "Button " + mButton.getText().toString() + "Click!!!");
+
+                String chk1res;
+
+                if (mCheckBox1.isChecked())
+                {
+                    chk1res = "";
+                }
+                else
+                {
+                    chk1res = "not ";
+                }
+
+                chk1res = chk1res + "checked";
+
+                Log.i(LOGTAG, "CheckBox 1 is " + chk1res + "Click!!!");
+
+
+            }
+        });
+
     }
 
 }
