@@ -103,7 +103,9 @@ public class DashboardActivity extends AppCompatActivity {
 
                 int id = mRadioGroup.getCheckedRadioButtonId();
 
-                Log.i(LOGTAG, "Radio Group wtf ??? " +  id);
+                RadioButton rb = findViewById(id);
+
+                Log.i(LOGTAG, "Radio Group wtf ??? " +  id + " " + rb.getText().toString());
 
 
             }
