@@ -9,6 +9,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 
 public class DashboardActivity extends AppCompatActivity {
 
@@ -17,6 +19,12 @@ public class DashboardActivity extends AppCompatActivity {
     public Button mButton;
     public CheckBox mCheckBox1;
     public CheckBox mCheckBox2;
+
+    public RadioButton mRadioButton1;
+    public RadioButton mRadioButton2;
+    public RadioButton mRadioButton3;
+
+    public RadioGroup mRadioGroup;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +56,11 @@ public class DashboardActivity extends AppCompatActivity {
         mCheckBox1 = findViewById(R.id.checkBox);
         mCheckBox2 = findViewById(R.id.checkBox2);
 
+        mRadioButton1 = findViewById(R.id.radioButton);
+        mRadioButton2 = findViewById(R.id.radioButton2);
+        mRadioButton3 = findViewById(R.id.radioButton3);
+
+        mRadioGroup = findViewById(R.id.radioGroup);
 
         mButton = findViewById(R.id.button7);
 
@@ -71,6 +84,26 @@ public class DashboardActivity extends AppCompatActivity {
                 chk1res = chk1res + "checked";
 
                 Log.i(LOGTAG, "CheckBox 1 is " + chk1res + "Click!!!");
+
+                String chk2res;
+
+                if (mCheckBox2.isChecked())
+                {
+                    chk2res = "";
+                }
+                else
+                {
+                    chk2res = "not ";
+                }
+
+                chk2res = chk2res + "checked";
+
+                Log.i(LOGTAG, "CheckBox 2 is " + chk2res + "Click!!!");
+
+
+                int id = mRadioGroup.getCheckedRadioButtonId();
+
+                Log.i(LOGTAG, "Radio Group wtf ??? " +  id);
 
 
             }
