@@ -70,7 +70,7 @@
 
         </ScrollView>
 
-        <LinearLayout
+        <!--<LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
@@ -91,7 +91,7 @@
                 android:ems="10"
                 android:inputType="date" />
 
-        </LinearLayout>
+        </LinearLayout> -->
 
         <ScrollView
             android:layout_width="match_parent"
