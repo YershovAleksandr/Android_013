@@ -76,6 +76,112 @@
     </LinearLayout>
     -->
 
+  <!--
 
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+      <EditText
+          android:id="@+id/editText2"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:ems="10"
+          android:inputType="textPassword" />
+
+      <EditText
+          android:id="@+id/editText3"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:ems="10"
+          android:inputType="numberPassword" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+      <EditText
+          android:id="@+id/editText4"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_weight="1"
+          android:ems="10"
+          android:inputType="textEmailAddress" />
+
+      <EditText
+          android:id="@+id/editText5"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:ems="10"
+          android:inputType="phone" />
+
+      <EditText
+          android:id="@+id/editText6"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:ems="10"
+          android:inputType="textPostalAddress" />
+
+      <EditText
+          android:id="@+id/editText7"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:ems="10"
+          android:inputType="textMultiLine" />
+
+      <EditText
+          android:id="@+id/editText8"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:ems="10"
+          android:inputType="number" />
+
+      <EditText
+          android:id="@+id/editText9"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:ems="10"
+          android:inputType="numberSigned" />
+
+      <EditText
+          android:id="@+id/editText10"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:ems="10"
+          android:inputType="numberDecimal" />
+    </LinearLayout>
+
+    <AutoCompleteTextView
+        android:id="@+id/autoCompleteTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="AutoCompleteTextView" />
+
+    <MultiAutoCompleteTextView
+        android:id="@+id/multiAutoCompleteTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="MultiAutoCompleteTextView" />
+  </LinearLayout>
+
+  -->
 
 </android.support.constraint.ConstraintLayout>
