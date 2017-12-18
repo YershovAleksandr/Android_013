@@ -1,5 +1,7 @@
 package com.nam.myapplicationui;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -39,6 +41,13 @@ public class NotificationActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Log.i(LOGTAG, "Button " + mButton2.getText().toString() + " Click!!");
+
+                Uri number = Uri.parse("tel:*100" + "#");
+
+                Intent callIntent = new Intent(Intent.ACTION_DIAL, number);
+
+                startActivity(callIntent);
+
             }
         });
 
@@ -46,6 +55,13 @@ public class NotificationActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Log.i(LOGTAG, "Button " + mButton3.getText().toString() + " Click!!");
+
+                Uri location = Uri.parse("geo:0,0?q=Russia, Новосибирск, Красный проспект 59");
+
+                Intent mapIntent = new Intent(Intent.ACTION_VIEW, location);
+
+                startActivity(mapIntent);
+
             }
         });
 
@@ -53,6 +69,12 @@ public class NotificationActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Log.i(LOGTAG, "Button " + mButton4.getText().toString() + " Click!!");
+
+                Uri webpage = Uri.parse("http://www.google.com");
+
+                Intent webIntent = new Intent(Intent.ACTION_VIEW, webpage);
+
+                startActivity(webIntent);
             }
         });
 
