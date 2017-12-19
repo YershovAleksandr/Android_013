@@ -1,7 +1,9 @@
 package com.nam.myapplicationui;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.net.Uri;
+import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -11,6 +13,8 @@ import android.widget.Button;
 public class NotificationActivity extends AppCompatActivity {
 
     public static final String LOGTAG = "XLOG42";
+
+    static final int PICK_CONTSCT_REQUEST = 42;
 
     private Button mButton2;
     private Button mButton3;
@@ -82,8 +86,16 @@ public class NotificationActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Log.i(LOGTAG, "Button " + mButton5.getText().toString() + " Click!!");
+
+                Intent pickContactIntent = new Intent(Intent.ACTION_PICK, Uri.parse("contact://contacts"));
+
+                pickContactIntent.setType(ContactsContract.CommonDataKinds.Phone.CONTENT_TYPE);
+
+                startActivityForResult(pickContactIntent, PICK_CONTSCT_REQUEST);
+
             }
         });
+
 
         mButton6.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -91,8 +103,36 @@ public class NotificationActivity extends AppCompatActivity {
                 Log.i(LOGTAG, "Button " + mButton6.getText().toString() + " Click!!");
             }
         });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (resultCode == PICK_CONTSCT_REQUEST){
+            Log.i(LOGTAG, "OnActivityResult id = " + PICK_CONTSCT_REQUEST);
+
+            if (resultCode == RESULT_OK)
+            {
+                Log.i(LOGTAG, "RESULT_OK");
+
+                Uri contactUri = data.getData();
+
+                String[] projection = {ContactsContract.CommonDataKinds.Phone.NUMBER};
+
+                Cursor cursor = getContentResolver()
+                        .query(contactUri, projection, null, null, null);
+
+                cursor.moveToFirst();
+
+                int column = cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER);
+                String number = cursor.getString(column);
+
+                Log.i(LOGTAG, "Number = " + number);
 
 
+            }
 
+        }
     }
 }
