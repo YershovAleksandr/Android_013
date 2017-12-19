@@ -109,7 +109,9 @@ public class NotificationActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if (resultCode == PICK_CONTSCT_REQUEST){
+        //Log.i(LOGTAG, "OnActivityResult id = " + PICK_CONTSCT_REQUEST);
+
+        if (requestCode == PICK_CONTSCT_REQUEST){
             Log.i(LOGTAG, "OnActivityResult id = " + PICK_CONTSCT_REQUEST);
 
             if (resultCode == RESULT_OK)
