@@ -131,8 +131,10 @@ public class NotificationActivity extends AppCompatActivity {
                 String number = cursor.getString(column);
 
                 Log.i(LOGTAG, "Number = " + number);
-
-
+            }
+            else if (resultCode == RESULT_CANCELED)
+            {
+                Log.i(LOGTAG, "RESULT_CANCELED!!!");
             }
 
         }
