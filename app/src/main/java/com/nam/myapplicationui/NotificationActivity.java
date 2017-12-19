@@ -14,7 +14,7 @@ public class NotificationActivity extends AppCompatActivity {
 
     public static final String LOGTAG = "XLOG42";
 
-    static final int PICK_CONTSCT_REQUEST = 42;
+    static final int PICK_CONTACT_REQUEST = 42;
 
     private Button mButton2;
     private Button mButton3;
@@ -91,7 +91,7 @@ public class NotificationActivity extends AppCompatActivity {
 
                 pickContactIntent.setType(ContactsContract.CommonDataKinds.Phone.CONTENT_TYPE);
 
-                startActivityForResult(pickContactIntent, PICK_CONTSCT_REQUEST);
+                startActivityForResult(pickContactIntent, PICK_CONTACT_REQUEST);
 
             }
         });
@@ -111,8 +111,8 @@ public class NotificationActivity extends AppCompatActivity {
 
         //Log.i(LOGTAG, "OnActivityResult id = " + PICK_CONTSCT_REQUEST);
 
-        if (requestCode == PICK_CONTSCT_REQUEST){
-            Log.i(LOGTAG, "OnActivityResult id = " + PICK_CONTSCT_REQUEST);
+        if (requestCode == PICK_CONTACT_REQUEST){
+            Log.i(LOGTAG, "OnActivityResult id = " + PICK_CONTACT_REQUEST);
 
             if (resultCode == RESULT_OK)
             {
