@@ -1,5 +1,6 @@
 package com.nam.myapplicationui;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -20,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
     private Staff mStaff;
 
     public Button mButton;
+
+    public Button mButton9;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -71,6 +74,20 @@ public class MainActivity extends AppCompatActivity {
         mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
+
+        mButton9 = findViewById(R.id.button9);
+        mButton9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.i(LOGTAG, "Start FragmentActivity");
+
+                Intent intent = new Intent(getBaseContext(), Main3Activity.class);
+
+                startActivity(intent);
+            }
+        });
+
     }
 
 }
