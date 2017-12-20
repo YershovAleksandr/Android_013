@@ -58,12 +58,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Log.i(LOGTAG , "BntClick 8 Click motherfucka !!!!");
 
-                Snackbar.make(/*view*/ v, "WTF&&&&&&&&&&&&&&&&&7777777777777", Snackbar.LENGTH_LONG)
-                      .setAction("Action", null).show();
+               // Snackbar.make(/*view*/ v, "WTF&&&&&&&&&&&&&&&&&7777777777777", Snackbar.LENGTH_LONG)
+                //      .setAction("Action", null).show();
 
-                /*Intent intent = new Intent(getBaseContext(), Main2Activity.class);
+                Intent intent = new Intent(getBaseContext(), Main2Activity.class);
 
-                startActivity(intent);*/
+                startActivity(intent);
 
             }
         });
