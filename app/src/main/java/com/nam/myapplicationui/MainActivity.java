@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
@@ -57,9 +58,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Log.i(LOGTAG , "BntClick 8 Click motherfucka !!!!");
 
-                Intent intent = new Intent(getBaseContext(), Main2Activity.class);
+                Snackbar.make(/*view*/ v, "WTF&&&&&&&&&&&&&&&&&7777777777777", Snackbar.LENGTH_LONG)
+                      .setAction("Action", null).show();
 
-                startActivity(intent);
+                /*Intent intent = new Intent(getBaseContext(), Main2Activity.class);
+
+                startActivity(intent);*/
 
             }
         });
