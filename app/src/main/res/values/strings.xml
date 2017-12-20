@@ -10,4 +10,6 @@
     <string name="button4">Open URL</string>
     <string name="button5">Pick contact</string>
     <string name="button6">Button6</string>
+    <string name="title_activity_main3">Fragment Activity!!!</string>
+    <string name="action_settings">Settings</string>
 </resources>
