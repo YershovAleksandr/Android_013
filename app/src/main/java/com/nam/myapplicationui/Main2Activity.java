@@ -24,7 +24,6 @@ public class Main2Activity extends AppCompatActivity {
         View view = findViewById(R.id.clayout);
 
 
-
         Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
               .setAction("Action", null).show();
 
