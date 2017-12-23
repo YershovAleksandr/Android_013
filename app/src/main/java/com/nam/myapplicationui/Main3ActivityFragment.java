@@ -2,6 +2,7 @@ package com.nam.myapplicationui;
 
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,7 +13,11 @@ import android.view.ViewGroup;
  */
 public class Main3ActivityFragment extends Fragment {
 
-    public Main3ActivityFragment() {
+    public static final String LOGTAG = "XLOG42";
+
+    public Main3ActivityFragment()
+    {
+        Log.i(LOGTAG, "this = " + this.toString());
     }
 
     @Override
