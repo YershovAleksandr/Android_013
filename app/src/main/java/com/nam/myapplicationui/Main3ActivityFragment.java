@@ -16,9 +16,8 @@ public class Main3ActivityFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
+    {
         View infl;
 
         //infl = inflater.inflate(R.layout.activity_home, container, false);
