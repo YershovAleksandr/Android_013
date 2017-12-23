@@ -21,7 +21,8 @@ public class Main3ActivityFragment extends Fragment {
 
         View infl;
 
-        infl = inflater.inflate(R.layout.activity_home, container, false);
+        //infl = inflater.inflate(R.layout.activity_home, container, false);
+        infl = inflater.inflate(R.layout.fragment_main3, container, false);
         //return inflater.inflate(R.layout.fragment_main3, container, false);
 
         return infl;
