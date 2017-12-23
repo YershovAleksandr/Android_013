@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="false"
     tools:context="com.nam.myapplicationui.Main3Activity">
 
     <android.support.design.widget.AppBarLayout
@@ -20,16 +21,48 @@
 
     </android.support.design.widget.AppBarLayout>
 
-<!--    <include layout="@layout/content_main3" />-->
-    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/fragment"
-        android:name="com.nam.myapplicationui.Main3ActivityFragment"
+    <!--    <include layout="@layout/content_main3" />-->
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        tools:layout="@layout/fragment_main3"/>
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="6dp"
+        tools:layout_editor_absoluteY="90dp">
+
+        <ToggleButton
+            android:id="@+id/toggleButton3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ToggleButton" />
+
+        <ToggleButton
+            android:id="@+id/toggleButton4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ToggleButton" />
+
+        <ToggleButton
+            android:id="@+id/toggleButton5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ToggleButton" />
+
+        <ToggleButton
+            android:id="@+id/toggleButton6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ToggleButton" />
+
+        <fragment
+            android:id="@+id/fragment"
+            android:name="com.nam.myapplicationui.Main3ActivityFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:layout="@layout/fragment_main3" />
+
+    </LinearLayout>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
