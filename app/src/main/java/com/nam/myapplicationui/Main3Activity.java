@@ -10,7 +10,6 @@ import android.view.View;
 
 
 
-
 public class Main3Activity extends AppCompatActivity {
 
     @Override
