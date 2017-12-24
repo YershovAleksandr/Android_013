@@ -29,8 +29,9 @@ public class Main3Activity extends AppCompatActivity {
 
         if (savedInstanceState != null)
         {
-            return;
+           // return;
         }
+
 
 
 
