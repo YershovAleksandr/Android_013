@@ -5,10 +5,15 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 
 
 public class Main3Activity extends AppCompatActivity {
+
+    public static final String LOGTAG = "XLOG42";
+
+    private Main3ActivityFragment mFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +47,7 @@ public class Main3Activity extends AppCompatActivity {
 
     private void FragmentAdd()
     {
-        Main3ActivityFragment fragment = new Main3ActivityFragment();
+        mFragment = new Main3ActivityFragment();
 
         //fragment.setArguments();
 
@@ -51,9 +56,14 @@ public class Main3Activity extends AppCompatActivity {
 
     private void FragmentRemove()
     {
-        Main3Activity fragment =
+        if (mFragment == null)
+        {
+            Log.i(LOGTAG, "WTF&&&777");
 
-        getSupportFragmentManager().beginTransaction().remove(fragment).commit();
+            return;
+        }
+
+        getSupportFragmentManager().beginTransaction().remove(mFragment).commit();
 
     }
 }
