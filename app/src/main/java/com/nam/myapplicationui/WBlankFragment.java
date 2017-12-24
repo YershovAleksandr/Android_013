@@ -1,5 +1,6 @@
 package com.nam.myapplicationui;
 
+import android.app.Activity;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
@@ -77,12 +78,15 @@ public class WBlankFragment extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
+       // mListener = (OnFragmentInteractionListener) context;
        /* if (context instanceof OnFragmentInteractionListener) {
             mListener = (OnFragmentInteractionListener) context;
         } else {
             throw new RuntimeException(context.toString()
                     + " must implement OnFragmentInteractionListener");
         }*/
+
+
     }
 
     @Override
