@@ -34,37 +34,44 @@
             android:id="@+id/toggleButton3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_weight="0"
             android:text="ToggleButton" />
 
         <ToggleButton
             android:id="@+id/toggleButton4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="0"
             android:text="ToggleButton" />
 
         <ToggleButton
             android:id="@+id/toggleButton5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_weight="0"
             android:text="ToggleButton" />
 
         <ToggleButton
             android:id="@+id/toggleButton6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_weight="0"
             android:text="ToggleButton" />
 
         <fragment
             android:id="@+id/fragment"
             android:name="com.nam.myapplicationui.Main3ActivityFragment"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="187dp"
+            android:layout_weight="0"
             app:layout_behavior="@string/appbar_scrolling_view_behavior"
             tools:layout="@layout/fragment_main3" />
 
-        <FrameLayout android:id="@+id/fragment42"
+        <FrameLayout
+            android:id="@+id/fragment42"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:layout_weight="0" />
 
     </LinearLayout>
 
