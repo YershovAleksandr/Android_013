@@ -45,7 +45,11 @@ public class Main3Activity extends AppCompatActivity {
         if (mToggleButton1.isChecked())
         {
             FragmentAdd();
+        }
+        else
+        {
 
+        }
 
 
 
