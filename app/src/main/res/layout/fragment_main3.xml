@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="#880088"
+    android:background="#888888"
     tools:context="com.nam.myapplicationui.Main3ActivityFragment"
     tools:showIn="@layout/activity_main3">
 
