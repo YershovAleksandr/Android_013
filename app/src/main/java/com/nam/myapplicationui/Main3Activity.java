@@ -49,5 +49,8 @@ public class Main3Activity extends AppCompatActivity {
         getSupportFragmentManager().beginTransaction().add(R.id.fragment42, fragment).commit();
     }
 
-    private
+    private void FragmentRemove()
+    {
+
+    }
 }
