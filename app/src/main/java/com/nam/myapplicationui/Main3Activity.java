@@ -70,9 +70,10 @@ public class Main3Activity extends AppCompatActivity {
     {
         mFragment = new Main3ActivityFragment();
 
-        //fragment.setArguments();
-
-        getSupportFragmentManager().beginTransaction().add(R.id.fragment42, mFragment).commit();
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.add(R.id.fragment42, mFragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
     }
 
     private void FragmentRemove()
