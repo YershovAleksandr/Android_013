@@ -32,15 +32,19 @@ public class Main3Activity extends AppCompatActivity {
             return;
         }
 
+
+
+
+
+    }
+
+    private void FragmentAdd()
+    {
         Main3ActivityFragment fragment = new Main3ActivityFragment();
 
         //fragment.setArguments();
 
         getSupportFragmentManager().beginTransaction().add(R.id.fragment42, fragment).commit();
-
-
-
-
     }
 
 }
