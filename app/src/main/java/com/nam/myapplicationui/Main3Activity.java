@@ -86,7 +86,6 @@ public class Main3Activity extends AppCompatActivity {
         }
 
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-
         transaction.remove(mFragment);
         //transaction.addToBackStack(null);
         transaction.commit();
