@@ -29,9 +29,10 @@ public class Main3Activity extends AppCompatActivity {
 
         if (savedInstanceState != null)
         {
-           // return;
+           return;
         }
 
+        FragmentAdd();
 
 
 
@@ -48,4 +49,5 @@ public class Main3Activity extends AppCompatActivity {
         getSupportFragmentManager().beginTransaction().add(R.id.fragment42, fragment).commit();
     }
 
+    private
 }
