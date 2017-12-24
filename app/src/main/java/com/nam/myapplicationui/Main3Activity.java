@@ -51,7 +51,9 @@ public class Main3Activity extends AppCompatActivity {
 
     private void FragmentRemove()
     {
-        //Main3Activity fragment =
+        Main3Activity fragment =
+
+        getSupportFragmentManager().beginTransaction().remove(fragment).commit();
 
     }
 }
