@@ -48,7 +48,7 @@ public class Main3Activity extends AppCompatActivity {
         }
         else
         {
-
+            FragmentRemove();
         }
 
 
