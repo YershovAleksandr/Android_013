@@ -36,20 +36,27 @@ public class Main3Activity extends AppCompatActivity {
 
         mToggleButton1 = findViewById(R.id.toggleButton2);
 
+        mToggleButton1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                if (mToggleButton1.isChecked())
+                {
+                    FragmentAdd();
+                }
+                else
+                {
+                    FragmentRemove();
+                }
+            }
+        });
 
         if (savedInstanceState != null)
         {
            return;
         }
 
-        if (mToggleButton1.isChecked())
-        {
-            FragmentAdd();
-        }
-        else
-        {
-            FragmentRemove();
-        }
+
 
 
 
