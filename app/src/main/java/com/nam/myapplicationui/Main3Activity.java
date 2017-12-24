@@ -36,6 +36,10 @@ public class Main3Activity extends AppCompatActivity {
 
         //fragment.setArguments();
 
+        getSupportFragmentManager().beginTransaction().add(R.id.fragment42, fragment).commit();
+
+
+
 
     }
 
