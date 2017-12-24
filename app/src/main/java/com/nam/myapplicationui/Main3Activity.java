@@ -51,6 +51,7 @@ public class Main3Activity extends AppCompatActivity {
 
     private void FragmentRemove()
     {
+        //Main3Activity fragment =
 
     }
 }
