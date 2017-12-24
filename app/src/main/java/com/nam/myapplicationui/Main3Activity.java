@@ -27,7 +27,14 @@ public class Main3Activity extends AppCompatActivity {
         });
 
 
+        if (savedInstanceState != null)
+        {
+            return;
+        }
 
+        Main3ActivityFragment fragment = new Main3ActivityFragment();
+
+        //fragment.setArguments();
 
 
     }
