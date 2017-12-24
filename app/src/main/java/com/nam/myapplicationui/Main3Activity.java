@@ -1,5 +1,6 @@
 package com.nam.myapplicationui;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -11,13 +12,16 @@ import android.view.View;
 import android.widget.ToggleButton;
 
 
-public class Main3Activity extends AppCompatActivity {
+public class Main3Activity extends AppCompatActivity /*implements WBlankFragment.OnFragmentInteractionListener*/
+{
 
     public static final String LOGTAG = "XLOG42";
 
     private Main3ActivityFragment mFragment;
+    private WBlankFragment mWFragment;
 
     private ToggleButton mToggleButton1;
+    private ToggleButton mToggleButton2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +40,7 @@ public class Main3Activity extends AppCompatActivity {
         });
 
         mToggleButton1 = findViewById(R.id.toggleButton3);
+        mToggleButton2 = findViewById(R.id.toggleButton4);
 
         mToggleButton1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,6 +56,33 @@ public class Main3Activity extends AppCompatActivity {
                 }
             }
         });
+
+        mToggleButton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                if (mToggleButton2.isChecked())
+                {
+                    if (mWFragment == null)
+                    {
+                        mWFragment = new WBlankFragment();
+                    }
+
+                    FragmentTransaction ftr = getSupportFragmentManager().beginTransaction();
+
+                    ftr.add(R.id.fragment42, mWFragment);
+                    ftr.commit();
+                }
+                else
+                {
+                    FragmentTransaction ftr = getSupportFragmentManager().beginTransaction();
+
+                    ftr.remove(mWFragment);
+                    ftr.commit();
+                }
+            }
+        });
+
 
         //WTF&&&777
         //TODO NEED FIX
@@ -91,4 +123,9 @@ public class Main3Activity extends AppCompatActivity {
         transaction.commit();
 
     }
+
+   /* public void OnFragmentInteraction(Uri uri)
+    {
+
+    }*/
 }
