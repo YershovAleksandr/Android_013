@@ -51,6 +51,8 @@ public class Main3Activity extends AppCompatActivity {
             }
         });
 
+        //WTF&&&777
+        //TODO NEED FIX
         if (savedInstanceState != null)
         {
            return;
