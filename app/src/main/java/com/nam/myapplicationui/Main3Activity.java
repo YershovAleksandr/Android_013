@@ -34,7 +34,7 @@ public class Main3Activity extends AppCompatActivity {
             }
         });
 
-        mToggleButton1 = findViewById(R.id.toggleButton2);
+        mToggleButton1 = findViewById(R.id.toggleButton3);
 
         mToggleButton1.setOnClickListener(new View.OnClickListener() {
             @Override
